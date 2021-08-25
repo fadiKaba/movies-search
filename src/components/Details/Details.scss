@@ -1,0 +1,67 @@
+@import '../../scss/color';
+
+.details-container{
+    color: $color-light;
+    .container{
+        .row{
+            h5{
+                font-size: 2.2rem;
+                font-weight: bold;
+            }
+            .year-details, .type-details, .rating-details{
+                font-size: 1.4rem;
+                font-weight: bold;
+                line-height: 17px;
+                text-transform: capitalize;
+            }
+            .rating-details{
+                display: inline-block;
+                img{
+                    width: 50px;
+                }
+            }
+            .info-details{
+                p{
+                    margin: 0;
+                }
+                span{
+                   font-weight: bold; 
+                } 
+            }
+            .check-availabel-btn{
+                background-color: $color-active;
+                font-weight: bold;
+                img{
+                    margin-left: 10px;
+                    margin-bottom: 3px;
+                    width: 20px;
+                }
+            }
+            div:nth-child(1){
+                text-align: center;
+            }
+        }
+    }
+    .plot{
+        .bg-dark{
+            .row{
+                background-color: rgba(0, 0, 0, 0.144);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 765px){
+    .details-container{
+        .container{
+            .row{
+                img{
+                    width: 100%;
+                }
+                div:nth-child(1){
+                    text-align: unset;
+                }
+            }
+        }
+    }
+}

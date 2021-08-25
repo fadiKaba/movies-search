@@ -1,0 +1,111 @@
+@import '../../scss/color';
+
+.search-container{
+    .inner-search-container{
+       // max-width: 80%;
+        margin: auto;
+        .selects{
+            max-width: 80vw;
+        }
+        #search-input-div{
+          //  max-width: 90vw;
+            margin: auto;
+        }
+        .results{
+            background-color: $color-primary;
+            color: $color-light;  
+            padding-top: 20px;          
+            margin: 0 auto;
+            h4{
+                font-size: 1.8rem;
+                color: $color-light;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+            h5, p{
+            font-size: .9rem;
+            }
+            .card{
+                background-color: #000;
+            }
+            .card-img-top{
+               // height: 15rem;
+                object-fit: contain;
+            }
+        }
+    }
+
+}
+
+#key-up-results-container{
+    position: relative;
+    z-index: 99;
+    
+    ul{ 
+        color: $color-light;
+        padding-left: 0;
+        padding: 2px;
+        position: absolute;
+        width: 100%;
+        max-height: 300px;
+        overflow: scroll;
+        
+        li{ 
+            background-color: rgba($color-primary, 0.99);
+            margin-bottom: 0px;
+            padding: 2px 5px; 
+            &:hover{
+                color: $color-active;
+            }
+            a{  
+                transition: 0.2s;
+                color: $color-light;
+                &:hover{
+                  color: $color-active;
+                }
+            }          
+            img{
+                width:40px;
+                margin-right: 5px;
+                &:hover #key-up-results-container ul li a{
+                    color: $color-active;
+                }
+            }
+        }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #333; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+
+@media screen and (max-width: 770px){
+    .search-container{
+        .inner-search-container{
+            max-width: 95vw;
+            .selects{
+            }
+            #search-input-div{
+
+            }
+            .results{
+
+            }
+        }
+    
+    }
+    
+}

@@ -1,0 +1,119 @@
+@import '../../scss/color';
+
+#gallery-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color:#000;
+}
+
+.movie-container{
+    @include bg-optimize;
+    height: 300px;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    &:hover h5{
+      transform: translateY(-50px);     
+    }
+    &:hover > .movie-header .info-container{
+        height: 100%;
+        span{
+            transform: translateY(-50px);
+        }
+    }
+    .movie-header{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        h5{ 
+            color: $color-light;
+            margin-top: 0;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            text-align: center;
+            transition: 0.4s;
+            align-self: center;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgba($color-primary, 0.4);
+        }
+        .info-container{
+            overflow: hidden;
+            height: 0;
+            width:100%;
+            color: $color-light;
+            background-image: linear-gradient(to top, rgba($color-primary, 0.5), rgba($color-primary, 0)) ;
+            text-align: left;
+            display: grid;
+            grid-template-areas: "r1 r2" 
+                                 "r3 r3" ;
+            align-content: end;
+            padding-left:10px;
+            box-sizing: border-box;
+            transition: 0.4s;
+            position: absolute;
+            bottom:0;
+            left:0;
+            .r1{
+              grid-area: r1;
+              margin-bottom: 10px;
+            }
+            .r2{
+              grid-area: r2; 
+              margin-bottom: 10px;
+            }
+            .r3{
+              grid-area: r3; 
+            }
+        }
+        span{
+            transition: 0.3s;
+        }
+    }
+}
+
+.card{
+    transition: 0.2s;
+    box-sizing: border-box;
+    &.hover-active{
+        &:hover{
+            border: solid $color-active 1px;
+        }
+    }
+    
+    .card-body{
+        a{
+            background-color: $color-active;
+            font-weight: bold;
+        }
+    }
+
+}
+
+@media screen and (max-width: 690px){
+    #gallery-content{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4px;
+    }
+    .movie-container{
+
+        
+        .movie-header{
+
+            h5{ 
+
+            }
+            .info-container{
+
+            }
+            span{
+
+            }
+        }
+    }
+}

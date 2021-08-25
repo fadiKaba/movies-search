@@ -1,0 +1,9 @@
+$color-primary: #202020;
+$color-light: #fff;
+$color-active: #FF8819; 
+
+@mixin bg-optimize {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

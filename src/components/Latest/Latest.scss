@@ -1,0 +1,19 @@
+@import '../../scss/color';
+
+.latest{
+    background-color: $color-primary;
+    h4{
+        font-size: 1.8rem;
+        color: $color-light;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .row{
+        background-color: $color-primary;
+        div{
+            div{
+                background-color: #000;
+            }
+        }
+    }
+}
