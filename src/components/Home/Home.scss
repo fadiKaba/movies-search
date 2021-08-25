@@ -7,7 +7,7 @@
         min-height: 90vh;
         background-image:  linear-gradient(to top, #000, rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.719)), url('./showcase.jpg');
          @include bg-optimize;
-        padding-top: 10vh;
+        padding-top: 12vh;
         .introducion{
             color: $color-light;
             text-align: center;

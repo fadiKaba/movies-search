@@ -1,10 +1,10 @@
 @import '../../scss/color';
 nav{
     .nav-inner-container{
-        height: 15vh;
+        height: 11vh;
         display: grid;
         grid-template-columns: 2fr 1fr;
-        align-items: center;
+//align-items: center;
         color: $color-light;
         background-color: $color-primary;
         h1{
@@ -12,8 +12,9 @@ nav{
              text-transform: uppercase;
              font-size: 1.9rem;
              font-weight: 300;
-             display: grid;
              display: flex;
+             align-items: center;
+             margin-bottom: 0;
         }
         #logo{
          width: 35px;
@@ -55,13 +56,12 @@ nav{
                 margin-right: 3vw;
                 img{
                     width: 25px;
-                    margin-top: 15px;
+                    margin-top: 23px;
                 }
             }
             ul{
                 position: absolute;
                 right: 3vw;
-                top:37px;
                 padding: 0;
                 width: 150px;
                 text-align: center;

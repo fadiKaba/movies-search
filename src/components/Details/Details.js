@@ -53,7 +53,7 @@ const Details = () => {
                               {item.Production && <p> <span>Production: </span>{item.Production}.</p>}
                               {item.Awards && <p> <span>Awards: </span>{item.Awards}.</p>}
                               {item.BoxOffice && <p><span>Box Office:</span> {item.BoxOffice}</p>}
-                              <p className="mt-3">
+                              {item.Type == "movie" && <p className="mt-3">
                                 <a 
                                 rel="noreferrer"
                                 target="_blank"
@@ -61,7 +61,7 @@ const Details = () => {
                                 className="btn check-availabel-btn">
                                 Check Movie Availability
                                 <img src={DownIcon} alt=""/>
-                               </a></p>
+                               </a></p>}
                           </div>
                       </div>
                   </div>

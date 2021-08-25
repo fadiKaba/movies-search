@@ -49,7 +49,6 @@ const Search = () =>{
                    setError(res.data.Error);
                }
                setIsSearching(false);
-               console.log(keyUpResults)
             })
             .catch(err => {
                 setError(err.message);
